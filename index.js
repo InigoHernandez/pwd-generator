@@ -34,13 +34,13 @@ function pwdString() {
   return result;
 }
   
- function pwdButton() {
+function pwdButton() {
     passwordFields.first.value = pwdString();
     passwordFields.second.value = pwdString();
     iconButton.first.disabled = false;
     iconButton.second.disabled = false;
-    }
-    
+}
+
 // Función auxiliar reutilizable para copiar texto
 function copyTextToClipboard(text) {
     // 1. Intenta la forma moderna (Async Clipboard API)
@@ -88,6 +88,11 @@ function copyPwd1() {
 function copyPwd2() {
     copyTextToClipboard(passwordFields.second.value);
 }
+
+// Ensure functions are available globally for inline onclick handlers
+window.pwdButton = pwdButton;
+window.copyPwd1 = copyPwd1;
+window.copyPwd2 = copyPwd2;
     
 
 
