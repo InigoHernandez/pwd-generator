@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1>Generate a<br><span id="active-color"> random password</span></h1>
+            <p id="bottom">Never use an insecure password again.</p>
+            <div id="pwd-input-1">
+                <button id="pwd-btn" onclick="pwdButton()">Generate passwords</button>
+                <select id="select-length">
+                    <option value="20">20 characters</option>
+                    <option value="16">16 characters</option>
+                    <option value="12">12 characters</option>
+                    <option value="8">8 characters</option>
+                </select>
+            </div>
+            <div id="pwd-input-3">
+                <div id="pwd-tgl">
+                    <label class="switch">
+                        <input id="togl-status" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <p id="secondary-txt">Symbols and numbers</p>
+                </div>
+            </div>   
+            <hr>
+            <div id="pwd-input-2">
+                <div id="pwd-container">
+                    <input id="pwd-1" type="text" placeholder="Generate password 1">
+                    <button id="icon-btn" onclick="copyPwd1()" disabled></button>
+                </div>
+                <div id="pwd-container">
+                    <input id="pwd-2" type="text" placeholder="Generate Password 2">
+                    <button id="icon-btn1" onclick="copyPwd2()" disabled></button>
+                </div>
+            </div>  
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

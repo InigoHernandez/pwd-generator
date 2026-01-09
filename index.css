@@ -1,0 +1,279 @@
+:root {
+  --primary-bg: #222222;
+  --secondary-bg: #2B303A;
+  --tertiary-bg: #54F2F2;
+  --quaternary: #cbcbcb;
+  --primary-txt: #FCFCFC;
+  --primary-dark: #dCdCdC;
+  --secondary-txt: #222222;
+  --active: #31CB00;
+  --darkActive: #119822;
+  --disabled: rgba(255, 255, 255, 0.3);
+  --transparent: rgba(255, 255, 255, 0.1);
+  --transparentDark: rgba(0, 0, 0, 0.2);
+}
+
+
+body {
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    height: 100vh;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-bg) ;
+    
+}
+
+#container {
+    width: 540px;
+    padding: 72px 54px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:fit-content;
+    background-color: var(--secondary-bg) ;
+    border-radius: 24px;
+    border: 1px solid var(--transparent);
+}
+
+h1 {
+    margin: 0 0 20px 0 ;
+    color: var(--primary-txt);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+p {
+    color: var(--quaternary);
+    font-weight: 400;
+    font-size: 17px;
+}
+
+#bottom {
+   margin: 0 0 40px 0; 
+}
+
+pwd-input-1 {
+    gap: 12px;
+    width: 100%;
+}
+
+button {
+    width: 46%;
+    background-color: var(--active);
+    border: 1px solid var(--transparentDark);
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: var(--secondary-txt);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px var(--transparentDark);
+}
+
+button:hover {
+    background-color: var(--darkActive) ;
+}
+
+button:disabled {
+    background-color: var(--quaternary);
+    cursor: not-allowed;
+    color: var(--transparentDark);
+}
+
+button:disabled:hover {
+    background-color: var(--quaternary);
+    color: var(--transparentDark);
+}
+
+#select-length {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: .65em auto;
+    padding-right: 2.5rem; 
+    padding-left: 1rem;
+    margin: 4px 4px 4px 4px;
+    width: 160px;
+    padding: 12px 12px;
+    background-color: var(--primary-txt);
+    border: 1px solid var(--transparentDark);
+    border-radius: 12px;
+    color: var(--secondary-txt);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px var(--transparentDark);
+}
+
+#select-length:hover {
+    background-color: var(--primary-dark);
+}
+
+#pwd-input-2 {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+}
+
+#pwd-container {
+    display: flex;
+    width: 100%;
+    flex: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+input {
+    margin: 0;
+    width: 100%;
+    border: 1px solid var(--transparent);
+    padding: 12px 4px 12px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-txt);
+    background-color: var(--transparent);
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px var(--transparentDark);
+}
+
+#icon-btn, #icon-btn1 {
+    margin: 0;
+    display: inline-flex;       /* Alinea icono y texto */
+    align-items: center;                  /* Espacio entre icono y texto */
+    background-color: var(--active);
+    color: var(--secondary-txt);
+    padding: 12px 12px;
+    font-weight: 600;
+    border: none;               /* Reset usual */
+    cursor: pointer;
+    width: fit-content;   
+}
+
+/* El icono se crea aquí */
+#icon-btn::before, #icon-btn1::before {
+    margin: 0;
+    content: '';
+    width: 16px;                /* TAMAÑO DEL ICONO */
+    height: 16px;
+    
+    /* Truco Pro: Usamos el SVG como máscara sobre un fondo de color.
+       Así el icono toma el color del texto (currentColor) automáticamente. */
+    background-color: currentColor; 
+    
+    /* El SVG codificado correctamente */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 3H14.6C16.8402 3 17.9603 3 18.816 3.43597C19.5686 3.81947 20.1805 4.43139 20.564 5.18404C21 6.03969 21 7.15979 21 9.4V16.5M6.2 21H14.3C15.4201 21 15.9802 21 16.408 20.782C16.7843 20.5903 17.0903 20.2843 17.282 19.908C17.5 19.4802 17.5 18.9201 17.5 17.8V9.7C17.5 8.57989 17.5 8.01984 17.282 7.59202C17.0903 7.21569 16.7843 6.90973 16.408 6.71799C15.9802 6.5 15.4201 6.5 14.3 6.5H6.2C5.0799 6.5 4.51984 6.5 4.09202 6.71799C3.71569 6.90973 3.40973 7.21569 3.21799 7.59202C3 8.01984 3 8.57989 3 9.7V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.0799 21 6.2 21Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 3H14.6C16.8402 3 17.9603 3 18.816 3.43597C19.5686 3.81947 20.1805 4.43139 20.564 5.18404C21 6.03969 21 7.15979 21 9.4V16.5M6.2 21H14.3C15.4201 21 15.9802 21 16.408 20.782C16.7843 20.5903 17.0903 20.2843 17.282 19.908C17.5 19.4802 17.5 18.9201 17.5 17.8V9.7C17.5 8.57989 17.5 8.01984 17.282 7.59202C17.0903 7.21569 16.7843 6.90973 16.408 6.71799C15.9802 6.5 15.4201 6.5 14.3 6.5H6.2C5.0799 6.5 4.51984 6.5 4.09202 6.71799C3.71569 6.90973 3.40973 7.21569 3.21799 7.59202C3 8.01984 3 8.57989 3 9.7V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.0799 21 6.2 21Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+#icon-btn:hover, #icon-btn1:hover {
+    background-color: var(--darkActive);
+    color: var(--secondary-txt);
+}
+
+#icon-btn:disabled, #icon-btn1:disabled {
+    background-color: var(--disabled);
+    color: var(--transparentDark);
+    cursor: not-allowed;
+}
+
+hr {
+    width: 100%;
+    border: 0.5px solid var(--transparent);
+    margin: 40px 0 40px 0 ;
+}
+
+#active-color {
+    color: var(--active);
+}
+
+#slider {
+    box-shadow: none;
+}
+
+#pwd-tgl {
+    margin: 24px 0px 0px 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--quaternary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--active);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-bg);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
