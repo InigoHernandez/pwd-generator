@@ -2,7 +2,7 @@
 
 A sleek, modern web application for generating secure random passwords. Create strong passwords instantly with customizable length and character options.
 
->> https://pwds-generator.netlify.app/
+>> [Live demo](https://inigohernandez.github.io/pwd-generator/)
 
 <img width="876" height="755" alt="image" src="https://github.com/user-attachments/assets/3b48f13c-ee82-404d-9210-1d5745089f2c" />
 
